@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_brand_admin,product.brand.admin,model_electronics_product_brand,electronics_store.group_electronics_admin,1,1,1,1
+access_product_brand_sales,product.brand.sales,model_electronics_product_brand,electronics_store.group_sales_officer,1,0,0,0
+access_product_brand_inventory,product.brand.inventory,model_electronics_product_brand,electronics_store.group_inventory_officer,1,1,1,1

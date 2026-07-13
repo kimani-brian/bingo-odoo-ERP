@@ -19,11 +19,11 @@ warranty plans and future sales features.
         "stock",
     ],
     "data": [
-        
+        "security/security.xml",
+        "security/ir.model.access.csv",
+        "views/product_brand_views.xml",
     ],
-    "demo": [
-
-    ],
+    "demo": [],
     "installable": True,
     "application": True,
 }

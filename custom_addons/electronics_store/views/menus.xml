@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- ===================================================== -->
+    <!-- Root Menu -->
+    <!-- ===================================================== -->
+
+    <menuitem
+        id="menu_electronics_root"
+        name="Electronics Store"
+        sequence="10"
+    />
+
+    <!-- ===================================================== -->
+    <!-- Configuration -->
+    <!-- ===================================================== -->
+
+    <menuitem
+        id="menu_configuration"
+        name="Configuration"
+        parent="menu_electronics_root"
+        sequence="10"
+    />
+
+    <!-- ===================================================== -->
+    <!-- Brands -->
+    <!-- ===================================================== -->
+
+    <menuitem
+        id="menu_product_brand"
+        name="Brands"
+        parent="menu_configuration"
+        action="action_product_brand"
+        sequence="1"
+    />
+
+    <!-- ===================================================== -->
+    <!-- Reports -->
+    <!-- ===================================================== -->
+
+    <menuitem
+        id="menu_reports"
+        name="Reports"
+        parent="menu_electronics_root"
+        sequence="20"
+    />
+
+</odoo>

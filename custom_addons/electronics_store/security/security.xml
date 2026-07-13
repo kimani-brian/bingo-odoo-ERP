@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Module Category -->
+    <record id="module_category_electronics_store" model="ir.module.category">
+        <field name="name">Electronics Store</field>
+        <field name="description">
+            Access levels for the Electronics Store ERP.
+        </field>
+        <field name="sequence">30</field>
+    </record>
+
+    <!-- ===================================================== -->
+    <!-- Administrator -->
+    <!-- ===================================================== -->
+
+    <record id="group_electronics_admin" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="category_id" ref="module_category_electronics_store"/>
+    </record>
+
+    <!-- ===================================================== -->
+    <!-- Sales Officer -->
+    <!-- ===================================================== -->
+
+    <record id="group_sales_officer" model="res.groups">
+        <field name="name">Sales Officer</field>
+        <field name="category_id" ref="module_category_electronics_store"/>
+    </record>
+
+    <!-- ===================================================== -->
+    <!-- Inventory Officer -->
+    <!-- ===================================================== -->
+
+    <record id="group_inventory_officer" model="res.groups">
+        <field name="name">Inventory Officer</field>
+        <field name="category_id" ref="module_category_electronics_store"/>
+    </record>
+
+</odoo>
