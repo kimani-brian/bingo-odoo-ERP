@@ -9,6 +9,7 @@
     <menuitem
         id="menu_electronics_root"
         name="Electronics Store"
+        groups="electronics_store.group_electronics_admin,electronics_store.group_sales_officer,electronics_store.group_inventory_officer"
         sequence="10"
     />
 

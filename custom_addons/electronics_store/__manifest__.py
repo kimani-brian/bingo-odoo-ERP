@@ -22,6 +22,7 @@ warranty plans and future sales features.
         "security/security.xml",
         "security/ir.model.access.csv",
         "views/product_brand_views.xml",
+        "views/menus.xml",
     ],
     "demo": [],
     "installable": True,

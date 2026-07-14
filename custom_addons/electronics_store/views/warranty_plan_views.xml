@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- ============================= -->
+    <!-- List View                     -->
+    <!-- ============================= -->
+
+    <record id="view_warranty_plan_list" model="ir.ui.view">
+        <field name="name">electronics.warranty.plan.list</field>
+        <field name="model">electronics.warranty.plan</field>
+
+        <field name="arch" type="xml">
+            <list string="Warranty Plans">
+
+                <field name="name"/>
+                <field name="duration"/>
+                <field name="unit"/>
+                <field name="active"/>
+
+            </list>
+        </field>
+
+    </record>
+
+    <!-- ============================= -->
+    <!-- Form View                     -->
+    <!-- ============================= -->
+
+    <record id="view_warranty_plan_form" model="ir.ui.view">
+
+        <field name="name">electronics.warranty.plan.form</field>
+
+        <field name="model">electronics.warranty.plan</field>
+
+        <field name="arch" type="xml">
+
+            <form string="Warranty Plan">
+
+                <sheet>
+
+                    <group>
+
+                        <field name="name"/>
+
+                        <field name="duration"/>
+
+                        <field name="unit"/>
+
+                        <field name="active"/>
+
+                    </group>
+
+                    <group>
+
+                        <field name="description"/>
+
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+
+    </record>
+
+</odoo>
