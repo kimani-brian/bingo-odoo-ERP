@@ -6,17 +6,11 @@
         id="action_warranty_plan"
         model="ir.actions.act_window">
 
-        <field name="name">
-            Warranty Plans
-        </field>
+        <field name="name">Warranty Plans</field>
 
-        <field name="res_model">
-            electronics.warranty.plan
-        </field>
+        <field name="res_model">electronics.warranty.plan</field>
 
-        <field name="view_mode">
-            list,form
-        </field>
+        <field name="view_mode">list,form</field>
 
     </record>
 

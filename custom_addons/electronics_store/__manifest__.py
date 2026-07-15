@@ -17,12 +17,27 @@ warranty plans and future sales features.
         "base",
         "product",
         "stock",
+        "sale",
+        
     ],
     "data": [
+
         "security/security.xml",
         "security/ir.model.access.csv",
+
         "views/product_brand_views.xml",
+        "views/product_brand_actions.xml",
+
+        "views/warranty_plan_views.xml",
+        "views/warranty_plan_actions.xml",
+
+        "views/product_template_views.xml",
+
+        "views/partner_views.xml",
+        "views/sale_order_views.xml",
+
         "views/menus.xml",
+
     ],
     "demo": [],
     "installable": True,

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- ====================================================== -->
+    <!-- Extend Product Form -->
+    <!-- ====================================================== -->
+
+    <record id="view_product_template_form_inherit_electronics"
+            model="ir.ui.view">
+
+        <field name="name">product.template.form.electronics</field>
+
+        <field name="model">product.template</field>
+
+        <field name="inherit_id"
+               ref="product.product_template_only_form_view"/>
+
+        <field name="arch" type="xml">
+
+            <xpath expr="//notebook" position="inside">
+
+                <page string="Electronics">
+
+                    <group>
+
+                        <group>
+
+                            <field name="brand_id"/>
+
+                            <field name="model_number"/>
+
+                        </group>
+
+                        <group>
+
+                            <field name="warranty_plan_id"/>
+
+                            <field name="serial_required"/>
+
+                        </group>
+
+                    </group>
+
+                </page>
+
+            </xpath>
+
+        </field>
+
+    </record>
+
+</odoo>

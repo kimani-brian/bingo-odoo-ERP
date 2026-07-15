@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record
+        id="view_sale_order_form_electronics"
+        model="ir.ui.view">
+
+        <field name="name">
+            sale.order.form.electronics
+        </field>
+
+        <field name="model">
+            sale.order
+        </field>
+
+        <field name="inherit_id"
+               ref="sale.view_order_form"/>
+
+        <field name="arch" type="xml">
+
+            <xpath expr="//page[@name='other_info']/group"
+                   position="inside">
+
+                <group string="Electronics Store">
+
+                    <field name="payment_type"/>
+
+                    <field
+                        name="deposit_amount"
+                        invisible="payment_type == 'full'"
+                        required="payment_type == 'installment'"
+                    />
+
+                    <field
+                        name="warranty_generated"
+                        readonly="1"
+                    />
+
+                    <field
+                        name="sales_notes"
+                    />
+
+                </group>
+
+            </xpath>
+
+        </field>
+
+    </record>
+
+</odoo>
