@@ -9,6 +9,7 @@
         name="Electronics Store"
         sequence="10"
         web_icon="electronics_store,static/description/icon.png"
+        action="action_product_brand"
         groups="base.group_user"
     />
 
@@ -63,5 +64,14 @@
         action="action_warranty_plan"
         sequence="2"
     />
+    <menuitem
+        id="menu_installments"
+        name="Installments"
+        parent="menu_electronics_root"
+        action="action_installments"
+        sequence="20"
+        groups="electronics_store.group_electronics_admin,electronics_store.group_sales_officer"
+    />
+
 
 </odoo>

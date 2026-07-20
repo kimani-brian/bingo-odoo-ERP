@@ -35,7 +35,6 @@
 
                             <field name="vip_customer"/>
 
-                            <field name="credit_limit"/>
 
                             <field name="loyalty_points"/>
 

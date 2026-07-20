@@ -1,52 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <odoo>
 
-    <record
-        id="view_sale_order_form_electronics"
-        model="ir.ui.view">
-
-        <field name="name">
-            sale.order.form.electronics
-        </field>
-
-        <field name="model">
-            sale.order
-        </field>
-
-        <field name="inherit_id"
-               ref="sale.view_order_form"/>
-
+    <record id="view_sale_order_form_electronics" model="ir.ui.view">
+        <field name="name">sale.order.form.electronics</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
 
-            <xpath expr="//page[@name='other_info']/group"
-                   position="inside">
+            <!-- XPath added before the sheet -->
+            <xpath expr="//sheet" position="before">
+                <!-- Add header elements here if needed -->
+            </xpath>
 
+            <!-- Original XPath for Other Information -->
+            <xpath expr="//page[@name='other_information']/group" position="inside">
                 <group string="Electronics Store">
-
                     <field name="payment_type"/>
-
-                    <field
-                        name="deposit_amount"
-                        invisible="payment_type == 'full'"
-                        required="payment_type == 'installment'"
-                    />
-
-                    <field
-                        name="warranty_generated"
-                        readonly="1"
-                    />
-
-                    <field
-                        name="sales_notes"
-                    />
-
+                    <field name="deposit_amount"
+                           invisible="payment_type == 'full'"
+                           required="payment_type == 'installment'"/>
+                    <field name="warranty_generated" readonly="1"/>
+                    <field name="sales_notes"/>
+                    <field name="installment_count"
+                           invisible="payment_type == 'full'"
+                           required="payment_type == 'installment'"/>
                 </group>
+            </xpath>
 
+            <!-- New XPath to add the Installments page to the notebook -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Installments">
+                    <field name="installment_ids" readonly="1">
+                        <!-- Odoo 19 uses <list> instead of <tree> -->
+                        <list>
+                            <field name="name"/>
+                            <field name="due_date"/>
+                            <field name="amount"/>
+                            <field name="state"/>
+                        </list>
+                    </field>
+                </page>
             </xpath>
 
         </field>
-
     </record>
 
 </odoo>

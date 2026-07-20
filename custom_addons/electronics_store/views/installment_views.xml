@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- ========================================== -->
+    <!-- List View                                  -->
+    <!-- ========================================== -->
+
+    <record id="view_installment_list"
+            model="ir.ui.view">
+
+        <field name="name">electronics.installment.list</field>
+        <field name="model">electronics.installment</field>
+
+        <field name="arch" type="xml">
+
+        <list>
+
+            <field name="sequence"/>
+
+            <field name="installment_type"/>
+
+            <field name="customer_id"/>
+
+            <field name="due_date"/>
+
+            <field name="amount"/>
+
+            <field name="remaining_balance"/>
+
+            <field name="invoice_id"/>
+
+            <field name="state"/>
+
+        </list>
+
+        </field>
+
+    </record>
+
+    <!-- ========================================== -->
+    <!-- Form View                                  -->
+    <!-- ========================================== -->
+
+    <record id="view_installment_form"
+            model="ir.ui.view">
+
+        <field name="name">electronics.installment.form</field>
+        <field name="model">electronics.installment</field>
+
+        <field name="arch" type="xml">
+
+            <form>
+
+                    <header>
+
+                        <button
+                            name="action_generate_invoice"
+                            type="object"
+                            string="Generate Invoice"
+                            class="btn-primary"
+                            invisible="invoice_id != False"
+                        />
+
+                        <field
+                            name="state"
+                            widget="statusbar"
+                        />
+
+                    </header>
+
+                <sheet>
+
+                    <group>
+
+                        <group>
+
+                            <field name="name"/>
+
+                            <field name="sale_order_id"/>
+
+                            <field name="customer_id"
+                                   readonly="1"/>
+
+                        </group>
+
+                        <group>
+
+                            <field name="due_date"/>
+
+                            <field name="amount"/>
+
+                            <field name="state"/>
+
+                        </group>
+
+                    </group>
+
+                    <group>
+
+                        <field name="notes"/>
+
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+
+    </record>
+
+</odoo>

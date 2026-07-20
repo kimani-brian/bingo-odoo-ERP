@@ -18,12 +18,13 @@ warranty plans and future sales features.
         "product",
         "stock",
         "sale",
-        
+        "account",
     ],
     "data": [
-
         "security/security.xml",
         "security/ir.model.access.csv",
+
+        "data/cron.xml",
 
         "views/product_brand_views.xml",
         "views/product_brand_actions.xml",
@@ -34,10 +35,13 @@ warranty plans and future sales features.
         "views/product_template_views.xml",
 
         "views/partner_views.xml",
+
         "views/sale_order_views.xml",
 
-        "views/menus.xml",
+        "views/installment_views.xml",
+        "views/installment_actions.xml",
 
+        "views/menus.xml",
     ],
     "demo": [],
     "installable": True,

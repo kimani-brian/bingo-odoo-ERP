@@ -29,11 +29,6 @@ class ResPartner(models.Model):
         default=False,
     )
 
-    credit_limit = fields.Float(
-        string="Credit Limit",
-        default=0.0,
-    )
-
     loyalty_points = fields.Integer(
         string="Loyalty Points",
         default=0,
